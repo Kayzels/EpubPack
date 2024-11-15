@@ -13,3 +13,7 @@ def snakeCaseString(s: str) -> str:
     if s.startswith("a_"):
         s = s[2:]
     return s
+
+
+def fixPath(p: str) -> str:
+    return p.replace("\\", "/").strip('"')
