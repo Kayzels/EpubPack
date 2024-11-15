@@ -9,7 +9,7 @@ class EpubException(Exception):
     """Represents specific exceptions that occur when packing an epub"""
 
     def __init__(self, message: str):
-        self.message = message
+        self.message: str = message
 
     @override
     def __str__(self) -> str:
@@ -35,13 +35,13 @@ class Epub:
             raise EpubException(
                 f"The path provided needs to be a folder. Given: {str(unzip_path)}"
             )
-        self.original_path = unzip_path
+        self.original_path: Path = unzip_path
         """Folder containing the epub files that should be made"""
 
         file_name = snakeCaseString(unzip_path.stem)
         if not save_folder.exists():
             save_folder.mkdir(parents=True)
-        self.epub_name = (save_folder / file_name).with_suffix(".epub")
+        self.epub_name: Path = (save_folder / file_name).with_suffix(".epub")
         """Full path and name of the epub file being made"""
 
     @override

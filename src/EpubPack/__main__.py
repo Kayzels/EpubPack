@@ -1,6 +1,5 @@
 from pathlib import Path
 import argparse
-from PyQt6.QtWidgets import QApplication
 from .epub import Epub, EpubException
 
 
@@ -19,9 +18,9 @@ class EpubPack:
             - folders: A file that contains paths to different epub folders that should be packed
             - save_folder: The location where the epub files should be saved
         """
-        self.folders = folders
+        self.folders: list[Path] = folders
         """A file that contains paths to different epub folders that should be packed"""
-        self.save_folder = save_folder
+        self.save_folder: Path = save_folder
         """The location where the epub files should be saved"""
 
     def pack(self):
@@ -50,7 +49,6 @@ def init_argparse() -> argparse.ArgumentParser:
     return parser
 
 
-if __name__ == "__main__":
 def main():
     parser = init_argparse()
     args = parser.parse_args()
@@ -67,4 +65,3 @@ def main():
 
     packer = EpubPack(folders_to_pack, destination)
     packer.pack()
-    app = QApplication([])
