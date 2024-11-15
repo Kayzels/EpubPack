@@ -9,7 +9,7 @@ but it's all separate, you can use this to put them together.
 
 This is a Python command line program, with the usage
 
-```shell
+```text
 usage: EpubPack.py [-h] [-v] (-f FILES | -i [INPUT ...]) -d DESTINATION
 
 Pack a list of unzipped epub files into epub files in a given save directory
@@ -40,13 +40,13 @@ and we want to save them to an `output/` folder, there are two ways to do it:
 
   And then type the command
 
-  ```shell
+  ```text
   python EpubPack.py -f epubs.txt -d output
 ```
 
 2. Type the folder paths in directly:
 
-  ```shell
+  ```text
   python EpubPack.py -i folders/folder1 folders/folder2 -d output
 ```
 
