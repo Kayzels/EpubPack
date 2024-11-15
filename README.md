@@ -25,9 +25,6 @@ options:
                         Location where epub files should be saved to
 ```
 
-That is, you send in either a text file that contains a list of folders
-you want to pack, such as:
-
 If we want to create two epub files, and they are in `folders/folder1` and `folders/folder2`,
 and we want to save them to an `output/` folder, there are two ways to do it:
 
