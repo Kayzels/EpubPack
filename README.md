@@ -16,9 +16,9 @@ Pack a list of unzipped epub files into epub files in a given save directory
 
 options:
   -h, --help            show this help message and exit
-  -v, --v               show program's version number and exit
+  -v, --version         show program's version number and exit
   -f FILES, --files FILES
-                        File containing a list of files to be packed
+                        File containing a list of folders to be packed
   -i [INPUT ...], --input [INPUT ...]
                         List of folder(s) to be packed, typed directly as arguments
   -d DESTINATION, --destination DESTINATION
@@ -37,14 +37,14 @@ and we want to save them to an `output/` folder, there are two ways to do it:
 
   And then type the command
 
-  ```text
+  ```shell
   python EpubPack.py -f epubs.txt -d output
-```
+  ```
 
 2. Type the folder paths in directly:
 
-  ```text
+  ```shell
   python EpubPack.py -i folders/folder1 folders/folder2 -d output
-```
+  ```
 
 ---

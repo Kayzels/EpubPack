@@ -43,13 +43,13 @@ def init_argparse() -> argparse.ArgumentParser:
         description="Pack a list of unzipped epub files into epub files in a given save directory"
     )
     parser.add_argument(
-        "-v", "--v", action="version", version=f"{parser.prog} version 0.1.0"
+        "-v", "--version", action="version", version=f"{parser.prog} version 0.1.0"
     )
 
     exclusive_group = parser.add_mutually_exclusive_group(required=True)
 
     exclusive_group.add_argument(
-        "-f", "--files", type=str, help="File containing a list of files to be packed"
+        "-f", "--files", type=str, help="File containing a list of folders to be packed"
     )
     exclusive_group.add_argument(
         "-i",
