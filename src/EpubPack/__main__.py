@@ -1,7 +1,7 @@
 from pathlib import Path
 import argparse
 from PyQt6.QtWidgets import QApplication
-from epub import Epub, EpubException
+from .epub import Epub, EpubException
 
 
 class EpubPack:
@@ -51,6 +51,7 @@ def init_argparse() -> argparse.ArgumentParser:
 
 
 if __name__ == "__main__":
+def main():
     parser = init_argparse()
     args = parser.parse_args()
     folders_to_pack: list[Path] = []
